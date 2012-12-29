@@ -52,3 +52,30 @@ entypo-pictogram(name)
 // entypo-social-pictogram :: a -> b
 entypo-social-pictogram(name)
   entypo-hash-get(entypo-social-charmap, name)
+
+
+//// Function entypo-font-source ///////////////////////////////////////
+//
+// Generates the proper "src" field for a font.
+//
+// entypo-font-source! :: String, String -> IO ()
+font-source(path, name)
+  path = unquote(path)
+  src: url(s('%s.eot', path))
+  src: url(s('%s.eot?#iefix', path)) format('embedded-opentype'),
+       url(s('%s.woff', path)) format('woff'),
+       url(s('%s.ttf', path)) format('truetype'),
+       url(s('%s.svg#%s', path, name)) format('svg')
+
+
+//// Function entypo-define ////////////////////////////////////////////
+//
+// Defines the @font-face for an Entypo font.
+//
+// entypo-define! :: String, String, String -> IO ()
+entypo-define(title, path, name)
+  @font-face
+    font-family: title
+    font-weight: normal
+    font-style: normal
+    font-source: path, name
