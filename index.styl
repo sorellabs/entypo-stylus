@@ -30,8 +30,10 @@
 // Uses pseudo-elements for the pictograms
 for pair in entypo-charmap
   .entypo-{pair[0]}:before
+    font-family: Entypo
     content: pair[1]
 
 for pair in entypo-social-charmap
   .entypo-social-{pair[0]}:before
+    font-family: Entypo Social
     content: pair[1]
