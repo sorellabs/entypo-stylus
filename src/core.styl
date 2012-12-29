@@ -42,7 +42,7 @@ entypo-hash-get(hash, key)
 //
 // entypo-pictogram :: a -> b
 entypo-pictogram(name)
-  entypo-hash-get(entypo-charmap, name)
+  return entypo-hash-get(entypo-charmap, name)
 
 
 //// Function entypo-social-pictogram //////////////////////////////////
@@ -51,7 +51,7 @@ entypo-pictogram(name)
 //
 // entypo-social-pictogram :: a -> b
 entypo-social-pictogram(name)
-  entypo-hash-get(entypo-social-charmap, name)
+  return entypo-hash-get(entypo-social-charmap, name)
 
 
 //// Function entypo-font-source ///////////////////////////////////////
@@ -62,9 +62,9 @@ entypo-social-pictogram(name)
 font-source(path, name)
   path = unquote(path)
   src: url(s('%s.eot', path))
-  src: url(s('%s.eot?#iefix', path)) format('embedded-opentype'),
-       url(s('%s.woff', path)) format('woff'),
-       url(s('%s.ttf', path)) format('truetype'),
+  src: url(s('%s.eot?#iefix', path)) format('embedded-opentype'), \
+       url(s('%s.woff', path)) format('woff'),                    \
+       url(s('%s.ttf', path)) format('truetype'),                 \
        url(s('%s.svg#%s', path, name)) format('svg')
 
 
