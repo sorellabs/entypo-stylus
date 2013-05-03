@@ -1,0 +1,20 @@
+{
+  "name": "entypo-stylus",
+  "version": "0.1.0",
+  "description": "Predefined classes/functions for Entypo on Stylus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/killdream/entypo-stylus.git"
+  },
+  "keywords": [
+    "stylus",
+    "css"
+  ],
+  "author": "Quildreen \"Sorella\" Motta",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}

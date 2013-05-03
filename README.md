@@ -4,6 +4,11 @@ Provides pre-defined classes and functions for displaying icons using the
 [Entypo][] font-face.
 
 
+## Installing
+
+    $ npm install entypo-stylus
+
+
 ## Using
 
 To use, just import the library and define the path to your fonts in your
